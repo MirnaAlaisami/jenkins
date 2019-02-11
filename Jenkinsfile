@@ -1,11 +1,13 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Stage 1') {
-            steps {
-                echo 'Hello world!' 
-            }
-        }
-    }
+node {
+	//Define all variables
+	def appName = 'todobackend'
+	
+	//Stage 1: Echo app name
+	stage('Example') {
+		sh("echo \"jenkinsfile for app ${appName}\" ")	
+	}
+
+		
 }
+
 
